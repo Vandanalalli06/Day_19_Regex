@@ -10,15 +10,30 @@ namespace RegexProblem
             Console.WriteLine("Welcome To User Registration Problems");
 
 
-            ValidPassword validrule = new ValidPassword();
-            bool validTest1 = validrule.validatePassword("Asdfgre");
-            bool validTest2 = validrule.validatePassword("Abcdefghi4#");
-            Console.WriteLine("{0} {1} ", (validTest1) ? "Valid" : "Invalid", (validTest2) ? "Valid" : "Invalid");
-            Console.ReadKey();
+            UserRegistration.RegexEmailSample emailSample = new UserRegistration.RegexEmailSample();
+            List<string> validtests = new List<string>() {"abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" ,
+                                                     "abc","abc@.com.my","abc123@gmail.a","abc123@.com","abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc..2002@gmail.com","abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a","abc@gmail.com.aa.au"};
+
+            foreach (var test in validtests)
+            {
+                bool result = emailSample.validateString(test);
+                if (result)
+                {
+                    Console.WriteLine("\n{0} is a valid email address", test);
+                }
+                else
+                {
+                    Console.WriteLine("\n{0} is an invalid email address", test);
+                }
+            }
         }
     }
 }
+           
 
+            
+
+    
 
 
 
