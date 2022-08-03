@@ -9,10 +9,10 @@ namespace RegexProblem
 {
     class ValidPassword
     {
-        public static string Password3 = "^[A-Z]+[a-zA-Z]{8,}[0-9]+$";
+        public static string Password4 = "^[A-Z]+[a-zA-Z]{8,}[0-9]+[><.,*&^%$#@!?]{1}$";
         public bool validatePassword(string Password)
         {
-            return Regex.IsMatch(Password, Password3);
+            return Regex.IsMatch(Password, Password4);
         }
     }
 }
