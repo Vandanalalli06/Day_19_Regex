@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace RegexProblem
 {
-    class ValidMobile
+    class ValidPassword
     {
-        public static string MobileNumber = "^[1-9][0-9][ ][6-9][0-9]{9}$";
-        public bool validateString(string Number)
+        public static string Password1 = "^[a-z A-Z]{8,}$";
+        public bool validatePassword(string Password)
         {
-            return Regex.IsMatch(Number, MobileNumber);
+            return Regex.IsMatch(Password, Password1);
         }
     }
 }

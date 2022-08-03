@@ -10,9 +10,9 @@ namespace RegexProblem
             Console.WriteLine("Welcome To User Registration Problems");
 
 
-            ValidMobile validmobile = new ValidMobile();
-            bool validTest1 = validmobile.validateString("9156784");
-            bool validTest2 = validmobile.validateString("91 6875649781");
+            ValidPassword validrule = new ValidPassword();
+            bool validTest1 = validrule.validatePassword("Asdfgre");
+            bool validTest2 = validrule.validatePassword("ASBGyrthd");
             Console.WriteLine("{0} {1} ", (validTest1) ? "Valid" : "Invalid", (validTest2) ? "Valid" : "Invalid");
             Console.ReadKey();
         }
