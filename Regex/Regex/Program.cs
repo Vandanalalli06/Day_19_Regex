@@ -10,10 +10,10 @@ namespace RegexProblem
             Console.WriteLine("Welcome To User Registration Problems");
 
            
-            ValidFirstName validFirstName = new ValidFirstName();
-            bool validTest1 = validFirstName.validateFirstName("Vandana");
-            bool validTest2 = validFirstName.validateFirstName("va");
-            Console.WriteLine("{0}  ", (validTest1) ? "Valid" : "Invalid");
+            ValidLastName validLastName = new ValidLastName();
+            bool validTest1 = validLastName.validateLastName("Dadi");
+            bool validTest2 = validLastName.validateLastName("Da");
+            Console.WriteLine("{0},{1}", (validTest1) ? "Valid" : "Invalid" , (validTest2) ? "Valid" : "Invalid");
             Console.ReadKey();
         }
     }
