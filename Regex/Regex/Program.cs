@@ -9,11 +9,11 @@ namespace RegexProblem
         {
             Console.WriteLine("Welcome To User Registration Problems");
 
-           
-            ValidFirstName validFirstName = new ValidFirstName();
-            bool validTest1 = validFirstName.validateFirstName("Vandana");
-            bool validTest2 = validFirstName.validateFirstName("va");
-            Console.WriteLine("{0}  ", (validTest1) ? "Valid" : "Invalid");
+
+            ValidEmail validEmail = new ValidEmail();
+            bool validTest1 = validEmail.validateEmail("abc.xyz@bl.co.in");
+            bool validTest2 = validEmail.validateEmail("abc.xyz@in");
+            Console.WriteLine("{0} {1} ", (validTest1) ? "Valid" : "Invalid", (validTest2) ? "Valid" : "Invalid");
             Console.ReadKey();
         }
     }
